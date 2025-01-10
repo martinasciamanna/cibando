@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'cibando';
 
 
-  allievi = ['Martina', 'Flavio', 'Matteo', 'Emanuele'];
+
+
 
 }
