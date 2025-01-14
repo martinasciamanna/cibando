@@ -11,6 +11,7 @@ import { RecipeService } from '../../../services/recipe.service';
 })
 export class RecipesListComponent {
   ricette: Recipe[] = [];
+  titoloRicevuto: any; //inizializza variaile
 
     constructor(private recipeService: RecipeService){
       this.recipeService.getRecipes().subscribe({
@@ -19,6 +20,11 @@ export class RecipesListComponent {
         },
         error: (e) => console.error(e)
       })
+    }
+
+    riceviTitolo(event: any){
+      this.titoloRicevuto = event;
+
     }
 
 }

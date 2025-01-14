@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
+import { RegistrazioneComponent } from './components/user/registrazione/registrazione.component';
 
 const routes: Routes = [
   {path:'', redirectTo: 'home', pathMatch: 'full'},
@@ -14,7 +15,7 @@ const routes: Routes = [
     {path: 'dettaglio/:_id', component: DetailComponent},
     {path: '',component:RecipesListComponent, pathMatch: 'full'}
   ]},
-
+  {path: 'registrazione', component: RegistrazioneComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

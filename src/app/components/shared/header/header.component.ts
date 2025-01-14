@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isCollapsed = true;
+
+  pippo = new FormGroup({
+    ciao: new FormControl('')
+  })
 }

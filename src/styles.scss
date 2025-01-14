@@ -23,3 +23,9 @@ body {
   border-color: $secondary-light-color-1;
 }
 
+.is-danger {
+  color: #a10606;
+  font-size: small;
+  position: relative;
+  top: -10px;
+}

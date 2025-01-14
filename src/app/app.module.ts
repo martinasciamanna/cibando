@@ -14,6 +14,9 @@ import { RecipeCardComponent } from './components/shared/recipe-card/recipe-card
 import { DetailComponent } from './components/recipes/detail/detail.component';
 import { RecipesListComponent } from './components/recipes/recipes-list/recipes-list.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistrazioneComponent } from './components/user/registrazione/registrazione.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,8 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
     HeaderComponent,
     RecipeCardComponent,
     DetailComponent,
-    RecipesListComponent
+    RecipesListComponent,
+    RegistrazioneComponent
 
   ],
   imports: [
@@ -31,7 +35,7 @@ import { RecipesListComponent } from './components/recipes/recipes-list/recipes-
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
-    NgbCollapseModule
+    NgbCollapseModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
