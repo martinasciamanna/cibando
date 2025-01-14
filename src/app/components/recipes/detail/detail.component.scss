@@ -1,0 +1,54 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+}
+
+.detail {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-image {
+  width: 100vw;
+  height: 360px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+//Titolo della card
+.detail-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #e03311;
+  padding: 50px;
+  text-align: center;
+}
+
+//Testo della card
+.detail-text {
+  text-align: justify;
+  padding: 10px;
+  font-size: 14px;
+  margin-left: 5%;
+  font-size: medium;
+  color:rgb(47, 47, 47);
+}
+
+.data-style{
+  margin-left: 70%;
+  background-color: gray;
+  font-size: small;
+}
+
+.difficolta{
+  width:  130px;
+}

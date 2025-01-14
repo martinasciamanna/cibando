@@ -1,0 +1,27 @@
+<div *ngIf="ricetta; else noData">
+  <div class="container">
+    <div class="detail"></div>
+        <div class="detail-image"  [ngStyle]="{'background-image':'url('+ ricetta.image +')'}"></div></div>
+        <div class="detail-body">
+        </div>
+        <div class="detail-title" >
+          {{ ricetta.title }}
+        </div>
+        <div class="detail-text">
+         {{ ricetta.description}}
+        </div>
+        <div class="data-style">
+          Pubblicata il {{ricetta.date}}
+        </div>
+        <div class="detail-text">
+          Difficoltà:
+          <p>
+          <img [src]="percorsoStelline + ricetta.difficulty + '.png'" class="Difficolta" alt="Difficoltà ricetta {{ricetta.difficulty}}" >
+            </p>
+        </div>
+</div>
+<ng-template #noData>
+  <div>
+    Ricetta non trovata
+  </div>
+</ng-template>
