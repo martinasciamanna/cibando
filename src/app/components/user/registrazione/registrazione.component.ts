@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component , inject} from '@angular/core';
 import { FormsModule, FormControl, Validators, FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../../../services/user.service';
 @Component({
   selector: 'app-registrazione',
   standalone: false,
@@ -8,6 +10,8 @@ import { FormsModule, FormControl, Validators, FormGroup} from '@angular/forms';
   styleUrl: './registrazione.component.scss'
 })
 export class RegistrazioneComponent {
+  private router = inject(Router)
+  private userService:UserService
 
   form  = new FormGroup({
   name: new FormControl('', [Validators.required]),
@@ -19,8 +23,11 @@ export class RegistrazioneComponent {
 
   passwordverificata = false;
 
-  onSubmit(){
+    onSubmit(){
       console.log(this.form.value)
+      const dati= {nome: this.form.controls.name.value,  wmail: this.form.controls.email.value}
+      this.userService.datiUtente.next(dati);
+      this.router.navigateByUrl('home')
     }
 
   VerificaPassword(e){
@@ -31,8 +38,9 @@ export class RegistrazioneComponent {
     }
     }
    convalidaForm(): boolean{
-
       if(this.form.valid && this.passwordverificata){
+        return false
+      }else{
         return false
       }
     }

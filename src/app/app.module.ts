@@ -5,7 +5,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PasswordModule } from 'primeng/password';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { DividerModule } from 'primeng/divider';
 import { CarouselComponent } from './components/shared/carousel/carousel.component';
 import { HomeComponent } from './components/home/home.component';
 import { RecipesComponent } from './components/recipes/recipes.component';
@@ -27,7 +29,8 @@ import { RegistrazioneComponent } from './components/user/registrazione/registra
     RecipeCardComponent,
     DetailComponent,
     RecipesListComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+
 
   ],
   imports: [
@@ -35,6 +38,8 @@ import { RegistrazioneComponent } from './components/user/registrazione/registra
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    PasswordModule,
+    DividerModule,
     NgbCollapseModule, FormsModule, ReactiveFormsModule
   ],
   providers: [],
